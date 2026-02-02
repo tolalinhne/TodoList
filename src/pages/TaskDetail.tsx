@@ -66,13 +66,6 @@ export default function TaskDetail() {
         })
     }
 
-    const statusLabels: Record<string, string> = {
-        TODO: 'To Do',
-        IN_PROGRESS: 'In Progress',
-        DONE: 'Done',
-        CANCELED: 'Canceled',
-    }
-
     if (loading) {
         return (
             <div className={styles.taskDetail}>
