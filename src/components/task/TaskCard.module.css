@@ -1,0 +1,140 @@
+.taskCard {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto auto;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.taskCard:hover {
+    background: var(--color-bg-hover);
+    border-color: var(--color-border-hover);
+}
+
+.statusIcon {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 2px solid;
+}
+
+.statusIcon.todo {
+    border-color: var(--color-status-todo);
+}
+
+.statusIcon.inProgress {
+    border-color: var(--color-status-in-progress);
+    background: linear-gradient(to right, var(--color-status-in-progress) 50%, transparent 50%);
+}
+
+.statusIcon.done {
+    border-color: var(--color-status-done);
+    background: var(--color-status-done);
+}
+
+.statusIcon.canceled {
+    border-color: var(--color-status-canceled);
+    background: var(--color-status-canceled);
+}
+
+.taskInfo {
+    min-width: 0;
+}
+
+.taskTitle {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.taskTitle.done {
+    text-decoration: line-through;
+    color: var(--color-text-tertiary);
+}
+
+.taskMeta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    margin-top: var(--space-1);
+}
+
+.taskId {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+}
+
+.priorityBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 6px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    border-radius: var(--radius-sm);
+    background: var(--color-bg-tertiary);
+}
+
+.priorityBadge.urgent {
+    color: var(--color-priority-urgent);
+}
+
+.priorityBadge.high {
+    color: var(--color-priority-high);
+}
+
+.priorityBadge.medium {
+    color: var(--color-priority-medium);
+}
+
+.priorityBadge.low {
+    color: var(--color-priority-low);
+}
+
+.categoryBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+}
+
+.categoryDot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-accent);
+}
+
+.dueDate {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-tertiary);
+    white-space: nowrap;
+}
+
+.dueDate.overdue {
+    color: var(--color-error);
+}
+
+.assignee {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--color-bg-tertiary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
